@@ -1,0 +1,45 @@
+------------
+Brute Force
+------------
+Check every pair of different elements in the array and return True if any pair has identical elements.
+
+<<ALGO>>
+- We will iterate the array using 2 loops to identify all possible pairs of distinct indices.
+- We will then compare if the pair has identical values, if yes then return True.
+- If after end of the loop, there are no identical pairs, then return False.
+- TIME COMPLEXITY : O(n^2), SPACE COMPLEXITY : O(1)
+
+--------------
+Using Sorting
+--------------
+We will sort the array(ascending/descending), so every duplicate will be next to each other. Hence, In this case, we just have to compare adjacent elements to detect duplicates.
+
+<<ALGO>>
+- Sort the array(increasing).
+- Iterate array from index 1.
+- Compare current element with previous, if wqual return True.
+- If loop ends, without finding equal neighbours, return False.
+- TIME COMPLEXITY : O(n log n), SPACE COMPLEXITY : O(1) or O(n) -> depends on the sorting algorithm used.
+
+--------------
+Using HashSet
+--------------
+We will use hash set to effciently keep track of already seen elements. As we iterate through array, we will check whether current element is already present in the set. If yes, it means duplicate exists.
+
+<<ALGO>>
+- Initialise an empty set to store seen elements.
+- Iterate each element in array. For each element, if it's already in the set, return True(duplicate found). If it's not in the set, add it to the set.
+- Return false, if loop ends without finding duplicate.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(n)
+
+--------------------
+Using HashSet Length
+--------------------
+Here we use the same idea as previous hash set method. Instead of checking each element, we just compare length of set with the original array. If duplicates exist, set will contain fewer elements compared to the original array.
+
+<<ALGO>>
+- Convert array into hash set.
+- Compare length of set with length of original array.
+- If set is smaller, return True(as duplicates seen will be removed from the set).
+- Otherwise, return False.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(n)
