@@ -1,0 +1,47 @@
+-------------
+Using Sorting
+-------------
+If 2 strings are anagrams, they must contain exactly same characters with same frequencies.
+
+By sorting both the strings, all characters will be arranged in a consistent order. If the 2 sorted strings are identical then they are anagrams.
+
+<<ALGO>>
+- If length of the strings differ, return False immediately because they cannot because they can't be anagrams.
+- Sort both the strings.
+- Compare the sorted strings - if they are equal, return True. Otherwise return False.
+- TIME COMPLEXITY : O(nlogn + mlogm), SPACE
+COMPLEXITY : O(1) or O(n) -> depends on sorting algorithm used.
+
+--------------
+Using Hash Map
+--------------
+Instead of sorting, we can count how many times each character appears in both strings.
+By using 2 hash maps(or dictionaries), we can track the frequencies of each character in both strings.
+If both frequency maps match exactly, then they are anagrams.
+
+<<ALGO>>
+- If length of the strings differ, return False immediately because they cannot because they can't be anagrams.
+- Create 2 hash maps, to store character frequencies of both strings.
+- Iterate through both strings at same time:
+	# Increase the character count for s[i] in the first hash map.
+	# Increase the character count for t[i] in the second hash map.
+- After building both maps, compare them - if both hash maps are equal, return True. Otherwise, return False.
+- TIME COMPLEXITY : O(n + m), SPACE COMPLEXITY : O(1), [since we have at most 26 different characters]
+
+-----------------------------
+Using Hash Table(Using Array)
+-----------------------------
+Since problem guarantees lowercase english letters, we can use a fixed-sized array of length 26 to count character frequencies instead of a hash map.
+
+This approach is effcient because it avoids hashing and uses constant space.
+
+<<ALGO>>
+- If length of the strings differ, return False immediately because they cannot because they can't be anagrams.
+- Create a frequency array of size 26, initialized to zero.
+- Iterate through both strings:
+	# Increment count at index corresponding to s[i].
+	# Decrement count at index corresponding to t[i].
+- After processing both strings, scan through count array:
+	# If any value is not zero, return False because frequencies differ.
+	# If all values are zero, return True since strings are anagrams.
+- TIME COMPLEXITY : O(n + m), SPACE COMPLEXITY : O(1), [since we have at most 26 different characters].
