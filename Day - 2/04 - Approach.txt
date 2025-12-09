@@ -1,0 +1,82 @@
+--------------
+Using Sorting
+--------------
+- Create an empty hash map(dictionary).
+- Process each string one-by-one:
+	* sort the characters of each string -> use it as key.
+	* original string -> goes to that key's list.
+	
+	➤ String: "act"
+	Sorted: "act" → key
+	res = {
+    "act": ["act"]
+	}
+
+	➤ String: "pots"
+	Sorted: "opst" → key
+	res = {
+    "act": ["act"],
+    "opst": ["pots"]
+	}
+
+	➤ String: "tops"
+	Sorted: "opst" (same key as "pots")
+	res = {
+    "act": ["act"],
+    "opst": ["pots", "tops"]
+	}
+
+	.. similarly for all strings.
+
+- Finally return all hashmap values.
+- TIME COMPLEXITY : O(m*nlogn), SPACE COMPLEXITY : O(m*n), where m is no. of strings and n is length of longest string.
+
+----------------
+Using Hash Table
+----------------
+- Since the problem uses lowercase English letters, a fixed-size array of length 26 can capture how many times each character appears.
+- Create a hash map where each key is a 26-length tuple representing character frequencies, and each value is a list of strings belonging to that anagram group.
+
+[a, b, c, d, e, ..., z] # Each cell counts how many times a letter appears.
+
+➤ String: "act"
+	
+	Character counts:
+		a → 1
+		c → 1
+		t → 1
+
+	Frequency array (zeros omitted for clarity):
+	[a=1, c=1, t=1]
+	Full 26-length tuple:
+	(1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0)
+
+	HashMap becomes:
+	{
+	(1,0,1,0,...,1,0,0): ["act"]
+	}
+
+
+➤ String: "pots"
+
+	Character counts:
+		p = 1
+		o = 1
+		t = 1
+		s = 1
+
+	Tuple:
+	[o=1, p=1, s=1, t=1]
+	Full tuple:
+	(0,0,0,...,1(o),1(p),0,0,1(s),1(t),0,...)
+
+	HashMap:
+	{
+		(1,0,1,0,...,1,0,0): ["act"],
+		(0,0,0,...1,1,0,0,1,1,...): ["pots"]
+	}
+
+	.. similarly for all strings.
+
+- Finally return all the lists stored in the hash map.
+- TIME COMPLEXITY : O(m*n), SPACE COMPLEXITY : O(m) extra space, O(m*n) space for the output list.
