@@ -1,0 +1,39 @@
+------------
+Brute Force
+------------
+We will use 2 loops to iterate through the array, if pair of any sum equals target sum - return indices of the pair.
+
+<<ALGO>>
+- Iterate through the array using 2 nested loops.
+- For each pair, add it and check if it equals target.
+- If yes, return the indices of the pair.
+- return empty [] if not found.
+- TIME COMPLEXITY : O(n^2), SPACE COMPLEXITY : O(1)
+
+
+-----------------------------
+Using Sorting with 2 pointers
+-----------------------------
+We will sort the array and use 2 pointer to find the two numbers that sums up to the target.
+
+<<ALGO>>
+- Create a copy of the array and sort it in ascending order.
+- Initialise 2 pointers, one at beginning and one at the end.
+- Iterate the sorted array and keep checking if the sum of the pointers equals target.
+- If sum is less than target, then move left pointer to the right.
+- If sum is more than the target, then move the right pointer to the left.
+- If sum is equal to target, return the indices of the 2 pointers.
+- TIME COMPLEXITY : O(nlogn), SPACE COMPLEXITY : O(n)
+
+
+------------------------
+Using Hash Map(One pass)
+------------------------
+We can solve the problem in single pass by iterating through the array and checking if complement of current element exists in the hash map.
+
+<<ALGO>>
+- Intialize an empty hashmap (value -> index).
+- Iterate through the array and compute complement of current element, which is 'target - nums[i]'.
+- Check if the complement exists in the hash map.
+- If exists, return the indices of the element and its complement.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(n)
