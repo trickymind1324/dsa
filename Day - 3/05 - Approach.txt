@@ -1,0 +1,91 @@
+-------------------------
+Using Hashmap and Sorting
+-------------------------
+Count frequencies --> Sort by frequency --> Take the top K
+
+<<ALGO>>
+- Create a hash map to store frequencies of each number.
+count = { 'number': 'frequency'}
+
+Example : nums = [1,2,2,3,3,3], k = 2
+-------------------------------------
+		Start with count = {}
+
+		Read 1 → count = {1: 1}
+
+		Read 2 → count = {1: 1, 2: 1}
+
+		Read next 2 → count = {1: 1, 2: 2}
+
+		Read 3 → count = {1: 1, 2: 2, 3: 1}
+
+		Read next 3 → count = {1: 1, 2: 2, 3: 2}
+
+		Read next 3 → count = {1: 1, 2: 2, 3: 3}
+
+		Final map: count = {1: 1, 2: 2, 3: 3}
+
+- Build a list of [(frequency, number)] pairs.
+	arr = [[1,1], [2,2], [3,3]] — each entry is [freq, num].
+
+- Sort(ascending) arr by frequency.
+	arr = [[1,1], [2,2], [3,3]] — already sorted in this case.
+
+- Collect the 'k' most frequent by pop(taking elements from the end).
+	Pop last → [3,3] → add 3 to result (res = [3]) (k = 1)
+
+	Pop next last → [2,2] → add 2 (res = [3,2]) (k = 2,  reached)
+
+- Return res = [3, 2]. The problem allows any order, so [2,3] or [3,2] is fine.
+
+- TIME COMPLEXITY : O(nlogn), SPACE COMPLEXITY : O(n)
+
+
+-----------------------------
+Using Hashmap and Bucket Sort
+-----------------------------
+- Create a hash map to store frequencies of each number.
+count = { 'number': 'frequency'}
+- Create an array of buckets where index i holds all numbers that appear exactly i times.
+- Scan buckets from high frequency to low, accumulating numbers until we have k elements.
+
+Example : nums = [1,2,2,3,3,3], k = 2
+--------------------------------------
+
+# Count frequencies (same as before):
+	count = {1:1, 2:2, 3:3}.
+
+# Create buckets: freq = [[] for _ in range(len(nums) + 1)]
+
+# Here, len(nums) = 6, so freq has 7 lists: freq[0] through freq[6].
+
+# Place numbers into buckets by their frequency:
+
+	num=1 with cnt=1 → freq[1].append(1)
+
+	num=2 with cnt=2 → freq[2].append(2)
+
+	num=3 with cnt=3 → freq[3].append(3)
+
+	Now freq looks like:
+
+	freq[0] = []
+	freq[1] = [1]
+	freq[2] = [2]
+	freq[3] = [3]
+	freq[4] = []
+	freq[5] = []
+	freq[6] = []
+
+# Collect from high frequency to low:
+
+	Start i = 6 → freq[6] is empty
+
+	i = 5 → empty
+
+	i = 4 → empty
+
+	i = 3 → [3] → append 3 to result (res = [3]) (need 1 more)
+
+	i = 2 → [2] → append 2 (res = [3,2]) → now have k=2, return [3,2]
+	
