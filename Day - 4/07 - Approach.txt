@@ -1,0 +1,36 @@
+--------------
+Using Division
+--------------
+- Traverse the array once:
+	>> multiply all non-zero numbers to get the total product.
+	>> count how many zeros appear.
+- If count of zeros > 1:
+	>> return an array of all zeros.
+- Create a result array of size n.
+- Loop through the numbers again:
+	>> if there is 1 non-zero:
+		<< index with zero gets the product of all non-zero numbers
+		<< all other positions get 0.
+	>> if there are no zeros:
+		<< set each result value to total_product // nums[i]
+- Return the result array.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(1), O(n)->for the output array.
+
+
+-----------------------------------------
+Using Prefix and Postfix Product(Optimal)
+-----------------------------------------
+
+- Initialise the result array res with all values set to 1.
+- Create a variable prefix = 1.
+- First pass(left to right):
+	>> for each index i:
+		<< set res[i] = prefix(product of all elements to the left)
+		<< update prefix *= nums[i]
+- Create a variable postfix = 1.
+- Second pass(right to left):
+	>> for each index i:
+		<< multiply res[i] by postfix(product of all elements to the right)
+		<< update postfix *= nums[i]
+- Return the result array.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(1), O(n)->for the output array.
