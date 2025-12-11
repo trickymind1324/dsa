@@ -1,0 +1,47 @@
+--------
+Encoding
+--------
+- If input list is empty, return an empty string.
+- Create an empty list to store the sizes of each.
+- For each string, append its length to the sizes list.
+- Build a single string by:
+	>> writing all sizes separated by comma.
+	>> adding a '#' to mark the end of the size list.
+	>> appending all the actual strings in order.
+
+Example: ["neet","code","love","you"]
+-------------------------------------
+• Compute lengths: [4,4,4,3]
+
+• Build length section (each length plus a comma): "4,4,4,3,"
+
+• Add # separator: "4,4,4,3,#"
+
+• Append all strings: "4,4,4,3,#neetcodeloveyou"
+
+• Final encoded string: 4,4,4,3,#neetcodeloveyou
+
+
+--------
+Decoding
+--------
+- If encoded string is empty, return an empty list.
+- Read characters from start until reaching '#' to extract all recorded sizes. Parse each size by reading until a comma.
+- After the '#', extract substrings according to sizes list. For each size, read that many characters and append the substring to the result.
+- Return the list of decoded strings.
+
+Continuing the above example after Encoding
+--------------------------------------------
+Encoded: 4 , 4 , 4 , 3 , # n e e t c o d e l o v e y o u
+
+• Start i = 0. Read until , → cur = "4" → sizes.append(4). Move i past comma.
+
+• Repeat for the next three sizes → sizes = [4,4,4,3]. After reading the comma after 3, i points to #.
+
+• i += 1 to skip #. Now i points at 'n' (start of content).
+
+• For sz = 4: slice s[i:i+4] = "neet", append, i += 4.
+
+• Next sz = 4: slice -> "code", next -> "love", final -> "you".
+
+• Result: ["neet","code","love","you"]
