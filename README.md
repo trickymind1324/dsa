@@ -1,4 +1,4 @@
-# 🚀 My DSA Practice Journey
+# My DSA Practice Journey
 
 A systematic approach to mastering Data Structures and Algorithms through daily problem solving.
 
@@ -10,19 +10,22 @@ This repository tracks my daily progress solving problems from [NeetCode 150](ht
 
 ## 📊 Progress Tracker
 
-- **Total Problems Solved:** 4/150
-- **Current Streak:** 2 days
-- **Start Date:** [08th December 2025]
+- **Total Problems Solved:** 7/150
+- **Current Streak:** 4 days
+- **Start Date:** [Add your start date]
 
 ## 🗂️ Problem Categories
 
 Problems are organized following the NeetCode 150 structure:
 
-- [x] **Arrays & Hashing** (4/9)
+- [x] **Arrays & Hashing** (7/9)
   - ✅ Contains Duplicate
   - ✅ Valid Anagram
   - ✅ Two Sum
   - ✅ Group Anagrams
+  - ✅ Top K Frequent Elements
+  - ✅ Encode and Decode Strings
+  - ✅ Product of Array Except Self
 - [ ] **Two Pointers** (0/5)
 - [ ] **Sliding Window** (0/6)
 - [ ] **Stack** (0/7)
@@ -55,6 +58,14 @@ Problems are organized following the NeetCode 150 structure:
 │   ├── 03_Two_Sum.py
 │   ├── 04 - Approach.txt
 │   └── 04_Group_Anagrams.py
+├── Day - 3/
+│   ├── 05 - Approach.txt
+│   ├── 05_Top_K_Freq_Elements.py
+│   ├── 06 - Approach.txt
+│   └── 06_Encode_Decode_String.py
+├── Day - 4/
+│   ├── 07 - Approach.txt
+│   └── 07_ProductOfArray.py
 └── Day - N/
     ├── XX - Approach.txt
     ├── XX_Problem_Name.py
@@ -73,7 +84,9 @@ Each day's folder contains:
 |------|----------------|--------|
 | Day 1 | 01. Contains Duplicate<br>02. Valid Anagram | Arrays & Hashing |
 | Day 2 | 03. Two Sum<br>04. Group Anagrams | Arrays & Hashing |
-| Day 3 | - | - |
+| Day 3 | 05. Top K Frequent Elements<br>06. Encode and Decode Strings | Arrays & Hashing |
+| Day 4 | 07. Product of Array Except Self | Arrays & Hashing |
+| Day 5 | - | - |
 
 ## 💡 Learning Notes
 
@@ -92,6 +105,7 @@ Key takeaways and patterns discovered during practice will be documented here.
 
 - [NeetCode](https://neetcode.io/) - Problem list and video explanations
 - [LeetCode](https://leetcode.com/) - Platform for practicing problems
+
 ---
 
 **"The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie**
