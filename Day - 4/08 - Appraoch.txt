@@ -1,0 +1,66 @@
+-----------
+Brute Force
+-----------
+We can directly check all these conditions one by one.
+
+- Check all rows:
+	> For each row index from 0 top 8:
+		: create an empty set.
+		: for each column index i from 0 to 8:
+			+ skip if the cell is "."
+			+ if the valuye is already in set, return false
+			+ else, add it to the set
+
+- Check all cols:
+	> For each col index from 0 top 8:
+		: create an empty set.
+		: for each row index i from 0 to 8:
+			+ skip if the cell is "."
+			+ if the valuye is already in set, return false
+			+ else, add it to the set
+
+- Check all 3x3 boxes:
+	> Number the 3x3 boxes from 0 top 8:
+		* for each square:
+			: create an empty set.
+			: for i in 0..2 and j in 0..2:
+				+ compute:
+					-> row = (square // 3) * 3 + i
+					-> col = (square % 3) * 3 + j
+				+ skip if the cell is "."
+				+ if the value is already in set, return false
+				+ else, add it to the set
+
+- TIME COMPLEXITY : O(n^2), SPACE COMPLEXITY : O(n)
+
+
+-----------------------
+Using HashSet(One Pass)
+-----------------------
+Instead of checking rows, columns, and 3×3 boxes separately, we can validate the entire Sudoku board in one single pass.
+For each cell, we check whether the digit has already appeared in:
+	1.the same row
+	2.the same column
+	3.the same 3×3 box
+
+- Create three hash maps of sets:
+	> rows to track digits in each row
+	> cols to track digits in each column
+	> squares to track digits in each 3×3 sub-box, keyed by (r // 3, c // 3)
+
+- Loop through every cell in the board:
+	> Skip the cell if it contains ".".
+	> Let val be the digit in the cell.
+		* If val is already in:
+			+ rows[r] → duplicate in the row
+			+ cols[c] → duplicate in the column
+			+ squares[(r // 3, c // 3)] → duplicate in the 3×3 box, then return False.
+
+- Otherwise, add the digit to all three sets:
+	> rows[r]
+	> cols[c]
+	> squares[(r // 3, c // 3)]
+
+- If the whole board is scanned without detecting duplicates, return True.
+
+- TIME COMPLEXITY : O(n^2), SPACE COMPLEXITY : O(n^2)
