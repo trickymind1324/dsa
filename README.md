@@ -10,15 +10,15 @@ This repository tracks my daily progress solving problems from [NeetCode 150](ht
 
 ## 📊 Progress Tracker
 
-- **Total Problems Solved:** 7/150
-- **Current Streak:** 4 days
+- **Total Problems Solved:** 9/150
+- **Current Streak:** 5 days
 - **Start Date:** [Add your start date]
 
 ## 🗂️ Problem Categories
 
 Problems are organized following the NeetCode 150 structure:
 
-- [x] **Arrays & Hashing** (7/9)
+- [x] **Arrays & Hashing** (9/9)
   - ✅ Contains Duplicate
   - ✅ Valid Anagram
   - ✅ Two Sum
@@ -26,6 +26,8 @@ Problems are organized following the NeetCode 150 structure:
   - ✅ Top K Frequent Elements
   - ✅ Encode and Decode Strings
   - ✅ Product of Array Except Self
+  - ✅ Valid Sudoku
+  - ✅ Longest Consecutive Sequence
 - [ ] **Two Pointers** (0/5)
 - [ ] **Sliding Window** (0/6)
 - [ ] **Stack** (0/7)
@@ -48,24 +50,6 @@ Problems are organized following the NeetCode 150 structure:
 
 ```
 .
-├── Day - 1/
-│   ├── 01 - Approach.txt
-│   ├── 01_Contains_Duplicate.py
-│   ├── 02 - Approach.txt
-│   └── 02_Valid_Anagram.py
-├── Day - 2/
-│   ├── 03 - Approach.txt
-│   ├── 03_Two_Sum.py
-│   ├── 04 - Approach.txt
-│   └── 04_Group_Anagrams.py
-├── Day - 3/
-│   ├── 05 - Approach.txt
-│   ├── 05_Top_K_Freq_Elements.py
-│   ├── 06 - Approach.txt
-│   └── 06_Encode_Decode_String.py
-├── Day - 4/
-│   ├── 07 - Approach.txt
-│   └── 07_ProductOfArray.py
 └── Day - N/
     ├── XX - Approach.txt
     ├── XX_Problem_Name.py
@@ -85,8 +69,8 @@ Each day's folder contains:
 | Day 1 | 01. Contains Duplicate<br>02. Valid Anagram | Arrays & Hashing |
 | Day 2 | 03. Two Sum<br>04. Group Anagrams | Arrays & Hashing |
 | Day 3 | 05. Top K Frequent Elements<br>06. Encode and Decode Strings | Arrays & Hashing |
-| Day 4 | 07. Product of Array Except Self | Arrays & Hashing |
-| Day 5 | - | - |
+| Day 4 | 07. Product of Array Except Self<br>08. Valid Sudoku | Arrays & Hashing |
+| Day 5 | 09. Longest Consecutive Sequence | Arrays & Hashing |
 
 ## 💡 Learning Notes
 
@@ -94,7 +78,7 @@ Key takeaways and patterns discovered during practice will be documented here.
 
 ## 🎯 Milestones
 
-- [x] Complete first 10 problems
+- [ ] Complete first 10 problems (9/10)
 - [ ] Solve 25 problems
 - [ ] Reach 50 problems milestone
 - [ ] Complete 75 problems (halfway!)
