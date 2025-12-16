@@ -1,0 +1,13 @@
+-------------
+Using HashSet
+-------------
+- Convert the list into a set for O(1) lookups.
+- Initialize 'longSeq' to track the length of the longest consecutive sequence.
+- For each number num in set:
+	* Check if num - 1 is not in the set:
+		> If true, num is the start of a sequence.
+		> Initialize currSeq = 0.
+		> While num + currSeq exists in the set, increase currSeq.
+- Update longSeq with the maximum length found.
+- Return longSeq after scanning all numbers.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(n)
