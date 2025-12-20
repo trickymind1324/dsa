@@ -1,0 +1,12 @@
+------------------
+Using Two Pointers
+------------------
+Since the array is sorted, we can use two pointers to adjust the sum efficiently.
+- Initialize two pointers:l = 0 (start) and r = len(numbers) - 1 (end)
+- While l < r:
+	* compute curSum = numbers[l] + numbers[r].
+	* If curSum > target, move r left to reduce the sum.
+	* If curSum < target, move l right to increase the sum.
+	* If curSum == target, return [l + 1, r + 1].
+- If no pair matches the target, return an empty list.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(1)

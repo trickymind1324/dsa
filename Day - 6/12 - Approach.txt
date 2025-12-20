@@ -1,0 +1,19 @@
+------------------
+Using Two Pointers
+------------------
+- Sort the array to handle duplicates and enable two-pointer logic.
+- Loop through the array using index i:
+	* Skip duplicate values for the first number.
+- Set two pointers:
+	* l = i + 1
+	* r = len(nums) - 1
+- While l < r:
+	* compute threeSum = a + nums[l] + nums[r].
+	* if threeSum > 0, move r left.
+	* if threeSum < 0, move l right.
+	* if threeSum == 0:
+		> add the triplet to the result.
+		> move both pointers inward.
+		> skip duplicates at the left pointer.
+- return the list of all valid triplets.
+- TIME COMPLEXITY : O(n^2), SPACE COMPLEXITY : O(1)
