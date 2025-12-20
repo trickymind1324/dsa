@@ -1,0 +1,12 @@
+------------------
+Using Two Pointers
+------------------
+- We will create a helper function isALphaNum to validate AlphaNumeric values.
+- We will take 2 pointers left(starting) and right(ending)
+- We will iterate through the string:
+	- if left is not AlphaNumeric, we will shift one place towards right
+	- if right is not AlphaNumeric, we will shift one place towards left
+	- after the above 2 checks, we will finally check:
+		* if left.lower != right.lower -> return False(not a Palindrome)
+		* if loop ends without any mismatch, return True
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(1)
