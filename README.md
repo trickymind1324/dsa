@@ -10,15 +10,15 @@ This repository tracks my daily progress solving problems from [NeetCode 150](ht
 
 ## 📊 Progress Tracker
 
-- **Total Problems Solved:** 9/150
-- **Current Streak:** 5 days
+- **Total Problems Solved:** 13/150
+- **Current Streak:** 6 days
 - **Start Date:** [Add your start date]
 
 ## 🗂️ Problem Categories
 
 Problems are organized following the NeetCode 150 structure:
 
-- [x] **Arrays & Hashing** (9/9)
+- [x] **Arrays & Hashing** (9/9) ✨ COMPLETE
   - ✅ Contains Duplicate
   - ✅ Valid Anagram
   - ✅ Two Sum
@@ -28,7 +28,11 @@ Problems are organized following the NeetCode 150 structure:
   - ✅ Product of Array Except Self
   - ✅ Valid Sudoku
   - ✅ Longest Consecutive Sequence
-- [ ] **Two Pointers** (0/5)
+- [x] **Two Pointers** (4/5)
+  - ✅ Valid Palindrome
+  - ✅ Two Integer Sum II
+  - ✅ 3Sum
+  - ✅ Container With Most Water
 - [ ] **Sliding Window** (0/6)
 - [ ] **Stack** (0/7)
 - [ ] **Binary Search** (0/7)
@@ -71,6 +75,8 @@ Each day's folder contains:
 | Day 3 | 05. Top K Frequent Elements<br>06. Encode and Decode Strings | Arrays & Hashing |
 | Day 4 | 07. Product of Array Except Self<br>08. Valid Sudoku | Arrays & Hashing |
 | Day 5 | 09. Longest Consecutive Sequence | Arrays & Hashing |
+| Day 6 | 10. Valid Palindrome<br>11. Two Integer Sum II<br>12. 3Sum<br>13. Container With Most Water | Two Pointers |
+| Day 7 | - | - |
 
 ## 💡 Learning Notes
 
@@ -78,8 +84,8 @@ Key takeaways and patterns discovered during practice will be documented here.
 
 ## 🎯 Milestones
 
-- [ ] Complete first 10 problems (9/10)
-- [ ] Solve 25 problems
+- [x] Complete first 10 problems ✨
+- [ ] Solve 25 problems (13/25)
 - [ ] Reach 50 problems milestone
 - [ ] Complete 75 problems (halfway!)
 - [ ] Solve 100 problems
@@ -94,4 +100,4 @@ Key takeaways and patterns discovered during practice will be documented here.
 
 **"The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie**
 
-*Consistency beats intensity. Keep pushing forward! 💪*
+*Consistency beats intensity. Keep pushing forward! 💪*   
