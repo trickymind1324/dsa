@@ -1,0 +1,14 @@
+------------------
+Using Two Pointers
+------------------
+- Initialize two pointers: l = 0, r = len(heights) - 1
+- Set res = 0 to store the maximum area.
+- While l < r:
+	* compute the current area:
+		> area = min(heights[l], heights[r]) * (r - l)
+	* update res with the maximum area so far.
+	* move the pointer at the shorter height:
+		> if heights[l] <= heights[r], move l right.
+		> otherwise, move r left.
+- Return res after the pointers meet.
+- TIME COMPLEXITY : O(n), SPACE COMPLEXITY : O(1)
