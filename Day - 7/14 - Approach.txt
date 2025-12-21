@@ -1,0 +1,13 @@
+-------------
+Binary Search
+-------------
+Binary search checks the middle element of a sorted array and decides which half to discard.
+
+- Initialize two pointers: l = 0 (start of array) ,r = len(nums) - 1 (end of array)
+- While l <= r:
+	* compute m = l + (r - l) // 2 (safe midpoint).
+	* if nums[m] == target, return m.
+	* if nums[m] < target, move search to the right half: update l = m + 1.
+	* if nums[m] > target, move search to the left half: update r = m - 1.
+- If the loop ends without finding the target, return -1.
+- TIME COMPLEXITY : O(nlogn), SPACE COMPLEXITY: O(1)
