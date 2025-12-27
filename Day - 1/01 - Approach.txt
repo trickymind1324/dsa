@@ -17,7 +17,7 @@ We will sort the array(ascending/descending), so every duplicate will be next to
 <<ALGO>>
 - Sort the array(increasing).
 - Iterate array from index 1.
-- Compare current element with previous, if wqual return True.
+- Compare current element with previous, if equal return True.
 - If loop ends, without finding equal neighbours, return False.
 - TIME COMPLEXITY : O(n log n), SPACE COMPLEXITY : O(1) or O(n) -> depends on the sorting algorithm used.
 
