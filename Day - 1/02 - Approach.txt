@@ -20,7 +20,7 @@ By using 2 hash maps(or dictionaries), we can track the frequencies of each char
 If both frequency maps match exactly, then they are anagrams.
 
 <<ALGO>>
-- If length of the strings differ, return False immediately because they cannot because they can't be anagrams.
+- If length of the strings differ, return False immediately because they can't be anagrams.
 - Create 2 hash maps, to store character frequencies of both strings.
 - Iterate through both strings at same time:
 	# Increase the character count for s[i] in the first hash map.
